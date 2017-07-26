@@ -3,33 +3,30 @@ import React from "react";
 import {
     HashRouter as Router,
     Route,
-    Link,
-    Redirect,
-    Switch
+    // Link,
+    // Redirect,
+    // Switch
 } from 'react-router-dom';
 
-import LoginPage from './LoginPage';
+import LoginPage from '../containers/LoginPage';
 import MainPage from "./MainPage";
-
+import Base from "./Base";
 
 class AppEntry extends React.Component {
 
-
     render() {
-
         return (
-            <div>
+            <Router>
                 <div>
-                    <Router>
-                        <div>
-
-                            <Route exact path="/" component={MainPage}/>
-                            <Route exact path="/login" render={() => <LoginPage/>} />
-
-                        </div>
-                    </Router>
+                    <div>
+                        <Base/>
+                    </div>
+                    <div>
+                        <Route exact path="/" render={() => <MainPage/>}/>
+                        <Route exact path="/login" render={() => <LoginPage/>}/>
+                    </div>
                 </div>
-            </div>
+            </Router>
         );
     }
 }

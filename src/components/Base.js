@@ -58,7 +58,7 @@ class Logged extends React.Component {
 }
 
 
-class MainAppBar extends React.Component {
+class Base extends React.Component {
     state = {
         logged: false,
     };
@@ -87,4 +87,4 @@ class MainAppBar extends React.Component {
     }
 }
 
-export default MainAppBar;
+export default Base;
